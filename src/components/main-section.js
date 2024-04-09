@@ -20,14 +20,14 @@ export default function MainSection(){
     const fontSize = {
         fontSize: width < 516 ? '0.7rem':'1rem',
         mainText : {
-            fontSize: width < 516 ? '1.5rem':'2.5rem',
+            fontSize: width < 516 ? '1.5rem':'3rem',
         }
     }
 
     const buttonSize ={
-        width: width < 516 ? '100px':'250px',
+        width: width < 516 ? '100px':'200px',
         height: width < 516 ? '20px':'40px',
-        fontSize: width < 516 ? '0.7rem':'2.5rem',
+        fontSize: width < 516 ? '0.7rem':'1rem',
     }
 
     useEffect(() => {
