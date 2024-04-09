@@ -17,6 +17,19 @@ export default function MainSection(){
         color:'white',
     }
 
+    const fontSize = {
+        fontSize: width < 516 ? '0.7rem':'1rem',
+        mainText : {
+            fontSize: width < 516 ? '1.5rem':'2.5rem',
+        }
+    }
+
+    const buttonSize ={
+        width: width < 516 ? '100px':'250px',
+        height: width < 516 ? '20px':'40px',
+        fontSize: width < 516 ? '0.7rem':'2.5rem',
+    }
+
     useEffect(() => {
         setWidth(window.innerWidth)
     }, []);
@@ -28,12 +41,12 @@ export default function MainSection(){
                     <Navbar/>
                     <div className={`d-flex justify-content-center ${width < 516 ? 'h-50': 'h-75 align-items-center '} text-center`}>
                         <div className={'w-50 h-50'}>
-                            <p className="display-3 text-center"><strong>O melhor café de Brasília</strong></p>
-                            <p className="mt-5">
+                            <p className="display-3 text-center" style={fontSize.mainText}><strong>O melhor café de Brasília</strong></p>
+                            <p className="mt-5" style={fontSize}>
                                 Bem-vindo ao Coffee Shop da Tia Rosa, onde cada xícara é uma experiência calorosa e acolhedora.
                                 Localizado no coração da cidade, nosso café encanta os clientes com o aroma sedutor do café fresco e uma atmosfera aconchegante.
                             </p>
-                            <button className="main-button mb-2"><Link href="#about" className="nav-link">Saber mais</Link></button>
+                            <button className="main-button mb-3" style={buttonSize}><Link href="#about" className="nav-link">Saber mais</Link></button>
                         </div>
                     </div>
                 </div>
